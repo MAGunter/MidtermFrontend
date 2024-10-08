@@ -138,23 +138,7 @@ nav a:hover{
     }
     
 }
-@media(max-width:875px){
-    .main-logo {
-        display:none;
-    }
-}
-@media(max-width:500px){
-    .home-page{
-        flex-direction: column;
-        margin: 1rem 2rem;
-    }
-    .home-page-content h3{
-        font-size: 2rem;
-    }
-    .home-page-content h1{
-        font-size: 3rem;
-    }
-}
+
 section{
     min-height: 100vh;
     padding: 5rem;
@@ -233,4 +217,31 @@ img{
     76%, 100%{
         content: "Great student"
     }
+}
+@media(max-width:875px){
+    .main-logo {
+        display:none;
+    }
+}
+.home-page-content h1{
+    font-size: 3rem;
+    font-weight: 400;
+}
+.home-page-content h3{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+@media(max-width:500px){
+    .home-page{
+        flex-direction: column;
+    }
+    .home-page-content h1{
+        font-size: 4rem;
+        font-weight: 400;
+    }
+    .home-page-content h3{
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
 }
