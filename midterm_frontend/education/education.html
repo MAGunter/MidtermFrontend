@@ -1,37 +1,75 @@
 <!DOCTYPE html>
+
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="education.css">
     <title>Education</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="education.css">
 </head>
 <body>
     <header class="header">
-        <img src="assets/education-background.jpg" alt="computer" class="main-background">
-        <div class="overlay"></div>
-        <nav>
-            <h1>Story of my education</h1>
+        <button class="header__hamburger" aria-label="Toggle navigation" aria-expanded="false">
+            <span class="header__hamburger-bar"></span>
+            <span class="header__hamburger-bar"></span>
+            <span class="header__hamburger-bar"></span>
+        </button>
+        <nav class="header__nav">
+            <a href="../family/family.html" class="header__nav-link">Family</a>
+            <a href="../education/education.html" class="header__nav-link">Education</a>
+            <a href="../hobbies/hobbies.html" class="header__nav-link">Hobbies</a>
+            <a href="../index/index.html" class="header__nav-link">Home</a>
         </nav>
     </header>
-    <section class="school">
-        <div class="school__about">
-            <h3>About my school days</h3>
-        </div>
-        <div class="block1">
-            <div class="school__img">
-                <img src="assets/school-time.jpg" alt="school image" class="school-img">
-            </div>
-            <div class="school__text">
-                <p>"I attended High 125 Private School with a clear goal: to secure a grant. During my time there, I founded my first chess club and also had the opportunity to fully develop my potential in school mathematics."</p>
-            </div>
-        </div>
-    </section>
-    <section class="uni">
 
-    </section>
+    <main class="container">
+        <section class="education">
+            <div class="education__background">
+                <img src="assets/education-background.jpg" alt="Educational Background" class="education__background-main">
+                <div class="education__overlay"></div>
+            </div>
+            
+            <div class="education__content">
+                <h1 class="education__title">Story of My Education</h1>
+            </div>
+        </section>
+
+        <section class="education__school">
+            <div class="education__block education__block--school">
+                <div class="education__image">
+                    <img src="assets/school-time.jpg" alt="School Days" class="education__img">
+                </div>
+                <div class="education__text">
+                    <p>
+                        "I attended High 125 Private School with a clear goal: to secure a grant. During my time there, I founded my first chess club and also had the opportunity to fully develop my potential in school mathematics."
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="education__university">
+            <div class="education__block education__block--university">
+                <div class="education__image">
+                    <img src="assets/uni-time.jpg" alt="University Time" class="education__img">
+                </div>
+                <div class="education__text">
+                    <p>
+                        "I was thrilled to start my university journey, as it had been my dream since I was 12. Earning a grant with a scholarship was tough, and studying here is challenging, but I believe these difficulties will make me stronger. I'm even able to join TechnoPark and participate in other projects as a backend developer."
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <footer class="footer">
-
+        <div class="footer__text">
+            <p>That's it!</p>
+            <p>Thanks for your attention!</p>
+        </div>
+        <div class="footer__return">
+            <a href="../index/index.html" class="footer__button">Return</a>
+        </div>
     </footer>
 </body>
 </html>

@@ -1,107 +1,322 @@
-@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;700&display=swap');
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
 }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
+
 body {
-	line-height: 1;
     font-family: 'Pixelify Sans', sans-serif;
+    background-color: #1A2618;
+    color: #F2D399;
+    line-height: 1.6;
+    text-align: center;
+    overflow-x: hidden;
 }
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-.main-background{
-    width: 100%;
-    height: 100vh;
-}
-.overlay {
-    position: absolute;
+
+.header {
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+.header__nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.header__nav-link {
+    font-size: 1.125rem;
+    color: #F2D399;
+    font-weight: 500;
+    border-bottom: 3px solid transparent;
+    transition: color 0.3s ease, transform 0.3s ease, border-bottom-color 0.3s ease;
+}
+
+.header__nav-link:hover {
+    color: #A68444;
+    transform: scale(1.1);
+    border-bottom-color: #A68444;
+}
+
+.header__hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.header__hamburger:focus {
+    outline: none;
+}
+
+.header__hamburger-bar {
+    height: 3px;
+    width: 100%;
+    background-color: #A68444;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.header__hamburger.active .header__hamburger-bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.header__hamburger.active .header__hamburger-bar:nth-child(2) {
+    opacity: 0;
+}
+
+.header__hamburger.active .header__hamburger-bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.education {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.education__background-main {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.education__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 1;
 }
-header{
-    position: absolute;
-    top:0;
-    left:0;
-    right:0;
-    filter: drop-shadow(10px);
-    height: 100vh;
-    overflow: hidden;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-nav{
+
+.education__content {
     position: relative;
-    z-index: 100;
-    transform: translateY(-30rem);
+    z-index: 2;
 }
-nav h1{
+
+.education__title {
     font-size: 3rem;
-    color: white;
+    color: #F2D399;
 }
-.school{
-    margin-top: 800px;
-    justify-content: center;
-    align-items: center;
-}
-.school__about h3{
-    justify-content: center;
-    align-content: center;
-    text-align: center;
-    font-size: 3rem;
-    margin-bottom: 50px;
-}
-.school__img img{
-    width: 700px;
-    height: 500px;
-}
-.block1{
+.education__block {
     display: flex;
-}
-.school-about h3{
-    font-size: 2rem;
-    box-shadow: 0 0 100px ;
-}
-.school__text{
-    text-align: center;
     justify-content: center;
     align-items: center;
+    margin: 5rem 0;
+    border: 5px solid #2D402A;
+    border-radius: 0.7rem;
+    overflow: hidden;
+    background-color: #1A2618;
+    box-shadow: 0 0 20px #2D402A;
+    transition: background-color 0.3s ease;
+}
+
+.education__block:hover {
+    background-color: #2D402A;
+}
+
+.education__block--school, .education__block--university {
+    flex-direction: row;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+.education__text{
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.education__block--university {
+    flex-direction: row-reverse;
+}
+
+.education__image {
+    flex: 1;
+    padding: 2rem;
+}
+
+.education__img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 0.7rem;
+    box-shadow: 0 0 20px rgba(64, 89, 60, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.education__img:hover {
+    transform: scale(1.05);
+}
+
+.education__text {
+    flex: 1;
+    padding: 2rem;
+    border: 2px solid #40593C;
+    border-radius: 0.5rem;
+    background-color: #40593C;
+    box-shadow: 0 0 20px rgba(64, 89, 60, 0.5);
+    transition: background-color 0.3s ease;
+}
+
+.education__text p {
+    font-size: 1.2rem;
+    color: #F2D399;
+    line-height: 1.5;
+}
+.footer {
+    padding: 5rem 9%;
+    background-color: #1A2618;
+    color: #F2D399;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.footer__text p {
+    font-size: 1.8rem;
+}
+
+.footer__return .footer__button {
+    padding: 0.8rem 2rem;
+    background-color: #40593C;
+    color: white;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.footer__return .footer__button:hover {
+    background-color: #A68444;
+}
+@media (max-width: 1050px) {
+    .header__nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 9%;
+        background-color: #1A2618;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+
+    .header__nav.active {
+        display: flex;
+    }
+
+    .header__hamburger {
+        display: flex;
+    }
+
+    .education__block {
+        flex-direction: column;
+    }
+
+    .education__block--university {
+        flex-direction: column;
+    }
+    .education__text{
+        margin: 10px;
+    }
+}
+
+@media (max-width: 800px) {
+    .education__img {
+        max-width: 400px;
+    }
+
+    .footer {
+        padding: 4rem 6%;
+    }
+
+    .footer__text p {
+        font-size: 1.5rem;
+    }
+
+    .footer__return .footer__button {
+        padding: 0.6rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 550px) {
+    .header__nav {
+        right: 5%;
+    }
+
+    .education__title {
+        font-size: 2rem;
+    }
+
+    .education__text {
+        padding: 1rem;
+    }
+
+    .education__img {
+        max-width: 300px;
+    }
+
+    .footer {
+        padding: 3rem 4%;
+    }
+
+    .footer__text p {
+        font-size: 1.2rem;
+    }
+
+    .footer__return .footer__button {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 350px) {
+    .header__logo {
+        font-size: 1.5rem;
+    }
+
+    .header__nav-link {
+        font-size: 1rem;
+    }
+
+    .education__title {
+        font-size: 1.5rem;
+    }
+
+    .education__text p {
+        font-size: 1rem;
+    }
+
+    .footer__text p {
+        font-size: 1rem;
+    }
+
+    .footer__return .footer__button {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
 }
