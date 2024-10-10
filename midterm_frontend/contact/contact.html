@@ -2,35 +2,43 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hire Me!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="contact.css">
-    <title>Hire me!</title>
 </head>
 <body>
-    <header>
-        <a href="#" class="main-logo">Arslan</a>
-        <div class="ham-menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <nav>
-            <a href="../family/family.html" class="family">Family</a>
-            <a href="../education/education.html" class="education">Education</a>
-            <a href="../hobbies/hobbies.html" class="hobbies">Hobbies</a>
-            <a href="../index/index.html" class="home">Home</a>
+    <header class="header">
+        <a href="#" class="header__logo">Arslan</a>
+        <button class="header__hamburger" aria-label="Toggle navigation" aria-expanded="false">
+            <span class="header__hamburger-bar"></span>
+            <span class="header__hamburger-bar"></span>
+            <span class="header__hamburger-bar"></span>
+        </button>
+        <nav class="header__nav">
+            <a href="../family/family.html" class="header__nav-link">Family</a>
+            <a href="../education/education.html" class="header__nav-link">Education</a>
+            <a href="../hobbies/hobbies.html" class="header__nav-link">Hobbies</a>
+            <a href="../index/index.html" class="header__nav-link">Home</a>
         </nav>
     </header>
-    <section class="container">
-        <div class="hire">
-            <p>Hire me!</p>
-        </div>
-        <div class="icons">
-            <a href="https://github.com/MAGunter" class="github" target="_blank"><i class="fa fa-github" style="font-size:36px"></i></a>
-            <a href="https://www.linkedin.com/in/%D0%BC%D0%B0%D1%80%D0%B0%D1%82-%D0%B0%D1%80%D1%81%D0%BB%D0%B0%D0%BD-446568305" class="linkedin" target="_blank"><i class="fa fa-linkedin" style="font-size:36px"></i></a>
-            <a href="https://youtube.com" class="instagram" target="_blank"><i class="fa fa-instagram" style="font-size:36px"></i></a>
-        </div>
-    </section>
+
+    <main class="container">
+        <section class="hire-section">
+            <p class="hire-section__text">Hire me!</p>
+        </section>
+        <section class="icons-section">
+            <a href="https://github.com/MAGunter" class="icons-section__link" target="_blank" aria-label="GitHub">
+                <i class="fa fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/%D0%BC%D0%B0%D1%80%D0%B0%D1%82-%D0%B0%D1%80%D1%81%D0%BB%D0%B0%D0%BD-446568305" class="icons-section__link" target="_blank" aria-label="LinkedIn">
+                <i class="fa fa-linkedin"></i>
+            </a>
+            <a href="https://youtube.com" class="icons-section__link" target="_blank" aria-label="YouTube">
+                <i class="fa fa-youtube"></i>
+            </a>
+        </section>
+    </main>
 </body>
 </html>
+
