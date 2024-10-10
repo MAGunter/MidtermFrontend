@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    font-family: 'Pixelify Sans', sans-serif;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.main-background{
+    width: 100%;
+    height: 100vh;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+header{
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    filter: drop-shadow(10px);
+    height: 100vh;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+nav{
+    position: relative;
+    z-index: 100;
+    transform: translateY(-30rem);
+}
+nav h1{
+    font-size: 3rem;
+    color: white;
+}
+.school{
+    margin-top: 800px;
+    justify-content: center;
+    align-items: center;
+}
+.school__about h3{
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 50px;
+}
+.school__img img{
+    width: 700px;
+    height: 500px;
+}
+.block1{
+    display: flex;
+}
+.school-about h3{
+    font-size: 2rem;
+    box-shadow: 0 0 100px ;
+}
+.school__text{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
