@@ -36,6 +36,29 @@ body {
     align-items: center;
     z-index: 1000;
 }
+.header__hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+    transition: all 0.3s ease;
+}
+
+.header__hamburger-bar {
+    height: 3px;
+    width: 100%;
+    background-color: #F2D399;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+.header__hamburger{
+    display:none;
+}
 
 .header__logo {
     font-size: 2rem;
@@ -187,4 +210,28 @@ a.header__logo{
 .father:hover, .mother:hover, .sister:hover, .me:hover {
     transform: translateY(-10px);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+@media(max-width: 550px){
+    nav{
+        display: none;
+    }
+    .header__hamburger{
+        display: flex;
+    }
+    .father__img img{
+        width: 300px;
+        height: 300px;
+    }
+    .mother__img img{
+        width: 300px;
+        height: 300px;
+    }
+    .sister__img img{
+        width: 300px;
+        height: 300px;
+    }
+    .me__img img{
+        width: 300px;
+        height: 300px;
+    }
 }

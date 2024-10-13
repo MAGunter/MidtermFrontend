@@ -168,19 +168,15 @@ body {
         gap: 2rem;
         padding: 3rem 2rem;
     }
-
     .profile-content h1 {
         font-size: 2.5rem;
     }
-
     .profile-content h3 {
         font-size: 1.75rem;
     }
-
     .nav {
         display: none;
     }
-
     .hamburger {
         display: flex;
     }
